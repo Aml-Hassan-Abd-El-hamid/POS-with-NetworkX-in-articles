@@ -53,4 +53,6 @@ Given the fact that in many cases, the POS tag of the token depends on how it ap
 
 **RNN**
 
-**LSTM**: I tried simple LSTM models with variant hyper-parameters -including #nodes, batch_size, #epochs- and the best that I got was 79.69% training accuracy 81.92% dev accuracy and 69.09% test accuracy.
+**LSTM**: I tried simple LSTM models with variant hyper-parameters -including #nodes, batch_size, and #epochs- and  the best that I got was 79.69% training accuracy 81.92% dev accuracy and 69.09% test accuracy<br>
+I tried the same simple LSTM models with variant hyper-parameters and the best that I got was 91.58% training accuracy 92.39% dev accuracy and 90.46% test accuracy.<br> 
+The only difference between the first batch of experiments and the second ones was the `maxlen` provided to the `pad_sequences` function, as in the first no.of experiments `maxlen = 150` and in the second batch of experiments  `maxlen = 478` where 478 is the length of the biggest sequence in the training dataset.
