@@ -50,4 +50,5 @@ INTJ  |    7
 ## Dataset
 
 **RNN**
-**LSTM**: I tried simple LSTM models with varient hyper-parameters and the best that I got was 81.92% dev accuracy and 69.09% test accuracy  
+
+**LSTM**: I tried simple LSTM models with varient hyper-parameters -including #nodes, batch_size, #epochs- and the best that I got was 79.69% training accuracy 81.92% dev accuracy and 69.09% test accuracy.
