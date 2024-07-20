@@ -19,9 +19,35 @@ What to turn in:
 ## Dataset
 The first thing that I did once I saw that task was starting the dataset hunt, I found three datasets:
 
-Dataset Name | link | main advantage 
+Dataset Name | link | main advantage | size
+--- | --- | --- | ---
+UD_Arabic-PADT | https://github.com/UniversalDependencies/UD_Arabic-PADT | respectful source, already split into training and testing | 6075 samples in train<br>909 in dev dataset<br>680 in test 
+Dialectal Arabic Datasets | https://www.kaggle.com/datasets/mahmoudreda55/dialectal-arabic-datasets<br><br>https://huggingface.co/datasets/QCRI/arabic_pos_dialect | contains dialects, already have a benchmark result attached in the dataset document, already uploaded on Kaggle and HF | 350 samples per each dialect: Egyptian, Levantine, Gulf, and Maghrebi<br><br> so 1400 samples in total 
+
+Given its trust-worthy source and the fact that it's much bigger, I diceided to go with the UD_Arabic-PADT dataset
+
+POS tag | training freq | desc
 --- | --- | --- 
-UD_Arabic-PADT | https://github.com/UniversalDependencies/UD_Arabic-PADT | respectful source, already split into training and testing
-Dialectal Arabic Datasets | https://www.kaggle.com/datasets/mahmoudreda55/dialectal-arabic-datasets<br><br>https://huggingface.co/datasets/QCRI/arabic_pos_dialect | contains dialects, already have a benchmark result attached in the dataset document, already uploaded on Kaggle and HF
+NOUN  |   74546 
+ADP   |  33617 
+ADJ   |  23498 
+PUNCT |   17511
+VERB  |   16807
+CCONJ |   15803
+X     |   13747
+PRON  |    8533
+NUM   |   6010
+DET   |   4648
+SCONJ |   4368
+PART  |   1709
+AUX   |   1699
+ADV   |    880
+SYM   |    329
+PROPN |    187
+INTJ  |    7
 
 
+## Dataset
+
+**RNN**
+**LSTM**: I tried simple LSTM models with varient hyper-parameters and the best that I got was 81.92% dev accuracy and 69.09% test accuracy  
