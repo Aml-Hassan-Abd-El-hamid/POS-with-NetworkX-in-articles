@@ -47,8 +47,10 @@ PROPN |    187
 INTJ  |    7
 
 
-## Dataset
+## Modelling
+
+Given the fact that in many cases, the POS tag of the token depends on how it appears in the sentence - 1584 tokens happen to be labelled with different POS tags -, that problem can be defined as a sequence problem - most NLP problems are so LOL - so I had to pick up a sequential model to deal with the problem.
 
 **RNN**
 
-**LSTM**: I tried simple LSTM models with varient hyper-parameters -including #nodes, batch_size, #epochs- and the best that I got was 79.69% training accuracy 81.92% dev accuracy and 69.09% test accuracy.
+**LSTM**: I tried simple LSTM models with variant hyper-parameters -including #nodes, batch_size, #epochs- and the best that I got was 79.69% training accuracy 81.92% dev accuracy and 69.09% test accuracy.
