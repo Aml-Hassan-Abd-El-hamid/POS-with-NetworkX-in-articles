@@ -1,6 +1,6 @@
 # POS-with-NetworkX-in-articles
 
-This repo started as a part of the technical assessment for Cyshield, they sent 3 tasks with 14 days time limit! What a fun time it is to be an AI engineer! Anyway, the rest of the tasks will be published as GH repos too for anyone who's interested in looking into them :)
+This repo started as a part of the technical assessment for Cyshield, they sent 3 tasks with 14-day time limit, The rest of the tasks will be published as GH repos too for anyone who's interested in looking into them :)
 
 That was the task body:
 ```
@@ -51,8 +51,16 @@ INTJ  |    7
 
 Given the fact that in many cases, the POS tag of the token depends on how it appears in the sentence - 1584 tokens happen to be labelled with different POS tags -, that problem can be defined as a sequence problem - most NLP problems are so LOL - so I had to pick up a sequential model to deal with the problem.
 
-**RNN**
+**LSTM**<br> 
+I tried simple LSTM models with variant hyper-parameters -including #nodes, batch_size, and #epochs- and  the best that I got was 79.69% training accuracy 81.92% dev accuracy and 69.09% test accuracy<br>
 
-**LSTM**: I tried simple LSTM models with variant hyper-parameters -including #nodes, batch_size, and #epochs- and  the best that I got was 79.69% training accuracy 81.92% dev accuracy and 69.09% test accuracy<br>
-I tried the same simple LSTM models with variant hyper-parameters and the best that I got was 91.58% training accuracy 92.39% dev accuracy and 90.46% test accuracy.<br> 
+I tried the same simple LSTM models with variant hyper-parameters and the best that I got was 93.42% training accuracy 93.25% dev accuracy and 90.45% test accuracy.<br> 
+
 The only difference between the first batch of experiments and the second ones was the `maxlen` provided to the `pad_sequences` function, as in the first no.of experiments `maxlen = 150` and in the second batch of experiments  `maxlen = 478` where 478 is the length of the biggest sequence in the training dataset.
+
+**RNN**<br>
+I built a very simple model using the `SimpleRNN` class from `keras` and trained it for only 2 epochs -I tried to go higher but got an overfitting issue- and used the same `maxlen` as in LSTM and I got the following results 94.02% training accuracy 93.21% dev accuracy and 90.28% test accuracy.
+
+## Useful references:
+- https://machinelearningmastery.com/understanding-simple-recurrent-neural-networks-in-keras/
+- https://medium.com/@tushar_aggarwal/networkx-a-comprehensive-guide-to-mastering-network-analysis-with-python-fd7e5195f6a0
