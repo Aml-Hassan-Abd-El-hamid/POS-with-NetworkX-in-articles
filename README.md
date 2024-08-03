@@ -48,7 +48,17 @@ INTJ  |    7
 
 
 ## Modelling
+I was asked by Cyshield **1) What was the biggest challenge you faced when carrying out this project?** and to answer this question I would say dealing with networx, I have never dealt with anything like that before but it's still good to look into it, which is my answer to thier second question **What do you think you have learned from the project?** it was Networx.<br>
+Also, I had so much trouble working with the Kaggle notebook, especially when I started using Networx, the notebook kept running out of memory and restarting.
 
+For starting I built a very simple model using the `SimpleRNN` class from `keras` and trained it for only 2 epochs -I tried to go higher but got an overfitting issue- and I got the following results 94.02% training accuracy 93.21% dev accuracy and 90.28% test accuracy.
 
+After that I tried to integrate NetworkX with the RNN Model, The graph representation done by NetworkX was used to create graphs where nodes are tokens and edges represent their connections. The adjacency matrices of these graphs are computed and padded, the model architecture stayed almost the same:
+- Embedding Layer: Converts tokens into dense vectors.
+- SimpleRNN: Processes token sequences.
+- Graph Features: Flattened adjacency matrices are combined with RNN output.
+- TimeDistributed Layer: Predicts POS tags for each token in the sequence.
+  
+This got me 94.67% training accuracy, 93.11% dev accuracy and 92.34% test accuracy, which unfortunately isn't really a great improvement from the baseline.
 ## Useful references:
 - https://medium.com/@tushar_aggarwal/networkx-a-comprehensive-guide-to-mastering-network-analysis-with-python-fd7e5195f6a0
