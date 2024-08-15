@@ -17,16 +17,16 @@ What to turn in:
 ```
 
 ## Dataset
-The first thing that I did once I saw that task was starting the dataset hunt, I found three datasets:
+The first thing that I did once I saw that task was to start the dataset hunt, I found 2 good datasets:
 
 Dataset Name | link | main advantage | size
 --- | --- | --- | ---
 UD_Arabic-PADT | https://github.com/UniversalDependencies/UD_Arabic-PADT | respectful source, already split into training and testing | 6075 samples in train<br>909 in dev dataset<br>680 in test 
 Dialectal Arabic Datasets | https://www.kaggle.com/datasets/mahmoudreda55/dialectal-arabic-datasets<br><br>https://huggingface.co/datasets/QCRI/arabic_pos_dialect | contains dialects, already have a benchmark result attached in the dataset document, already uploaded on Kaggle and HF | 350 samples per each dialect: Egyptian, Levantine, Gulf, and Maghrebi<br><br> so 1400 samples in total 
 
-Given its trust-worthy source and the fact that it's much bigger, I diceided to go with the UD_Arabic-PADT dataset
+Given its trustworthy source and the fact that it's much bigger, I decided to go with the UD_Arabic-PADT dataset
 
-POS tag | training freq 
+POS tag | Training freq 
 --- | --- 
 NOUN  |   74546 
 ADP   |  33617 
@@ -48,8 +48,8 @@ INTJ  |    7
 
 
 ## Modelling
-I was asked by Cyshield **1) What was the biggest challenge you faced when carrying out this project?** and to answer this question I would say dealing with networx, I have never dealt with anything like that before but it's still good to look into it, which is my answer to thier second question **What do you think you have learned from the project?** it was Networx.<br>
-Also, I had so much trouble working with the Kaggle notebook, especially when I started using Networx, the notebook kept running out of memory and restarting.
+I was asked by Cyshield ** What was the biggest challenge you faced when carrying out this project?** to answer this question I would say dealing with Networx, I have never dealt with anything like that before but it's still good to look into it, which is my answer to thier second question **What do you think you have learned from the project?** What I got out of that project was the exposure to a tool like Networx.<br>
+I had so much trouble working with the Kaggle notebook, especially when I started using Networx, the notebook kept running out of memory and restarting.
 
 For starting I built a very simple model using the `SimpleRNN` class from `keras` and trained it for only 2 epochs -I tried to go higher but got an overfitting issue- and I got the following results 94.02% training accuracy 93.21% dev accuracy and 90.28% test accuracy.
 
